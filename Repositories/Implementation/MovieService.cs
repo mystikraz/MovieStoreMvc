@@ -134,6 +134,19 @@ namespace MovieStoreMvc.Repositories.Implementation
                 return false;
             }
         }
+        public bool UpdateRating(Movie model)
+        {
+            try
+            {
+                ctx.Movie.Update(model);
+                ctx.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
         public List<int> GetGenreByMovieId(int movieId)
         {

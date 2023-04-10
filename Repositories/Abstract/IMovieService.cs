@@ -11,6 +11,7 @@ namespace MovieStoreMvc.Repositories.Abstract
         bool Delete(int id);
         MovieListVm List(string term = "", bool paging = false, int currentPage = 0);
         List<int> GetGenreByMovieId(int movieId);
+        bool UpdateRating(Movie model);
 
     }
 }
